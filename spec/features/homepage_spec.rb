@@ -15,4 +15,9 @@ describe "homepage" do
     click_link 'Begin'
     expect(page).to have_content 'Missing People'
   end
+
+  it "has a link" do
+    visit '/'
+    expect(page).to have_link 'About-Us'
+  end
 end
