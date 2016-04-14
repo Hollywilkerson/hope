@@ -16,6 +16,7 @@ gem 'faker'
 gem 'bootstrap-generators'
 gem 'gmaps4rails'
 gem 'devise'
+gem 'font-awesome-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
