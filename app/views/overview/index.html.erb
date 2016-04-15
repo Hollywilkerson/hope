@@ -5,5 +5,12 @@
 
 <%= image_tag('missing-logo.jpg', alt: 'missing', width: '700', height: '500') %>
 
-<p>© <%= Date.today.year %> My App.</p>
+<div style='width: 800px;'>
+  <div id="basic_map" style='width: 800px; height: 400px;'></div>
+</div>
+
+
+<script>
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+</script>
 
