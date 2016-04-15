@@ -1,5 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+<<<<<<< HEAD
+=======
+
+>>>>>>> fc11993ed05557b3be83ccf58b3bb84be7be6c8b
   # The test environment is used exclusively to run your application's
   # test suite. You never need to work with it otherwise. Remember that
   # your test database is "scratch space" for the test suite and is wiped
