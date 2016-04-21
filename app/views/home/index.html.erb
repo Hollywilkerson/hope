@@ -29,8 +29,6 @@
 
 
 
-
-
 <div style='width: 800px;'>
   <div id="basic_map" style='width: 800px; height: 400px;'></div>
 </div>
@@ -38,8 +36,6 @@
 
 
 
-
-<p>© <%= Date.today.year %> My App.</p>
 <script>
 $(document).ready(function(){
 
@@ -48,7 +44,7 @@ handler = Gmaps.build('Google');
 handler.buildMap({ provider: {}, internal: {id: 'basic_map'}}, function(){
   markers = handler.addMarkers([
     {
-      "lat": 39,
+      "lat": 40,
           "lng": -104,
           "picture": {
             "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
@@ -64,3 +60,9 @@ handler.buildMap({ provider: {}, internal: {id: 'basic_map'}}, function(){
 
 });
 </script>
+
+
+
+
+
+<p>© <%= Date.today.year %> My App.</p>
