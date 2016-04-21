@@ -1,0 +1,43 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{background-color:deeppink}
+
+navbar-header {
+  color: #333;
+}
+
+
+ h1.center-block {
+   font-size: 15em;
+   letter-spacing: -2px;
+   margin-bottom: 30px;
+   text-align: center;
+ }
+
+
+ bogus.centerImage {
+   position: absolute;
+   right: 0px;
+   width: 500px;
+   border: 3px solid #73AD21;
+   padding: 10px;
+ }
+
+
+ h5.right {
+   font-size: 3em;
+   letter-spacing: -2px;
+   margin-bottom: 30px;
+   text-align: center;
+ }
+
+
+blah.centerImage {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+
