@@ -1,5 +1,6 @@
 <%= image_tag('treehope.jpg',alt: 'logo', width: '200', height: '120', :style => "border: 5px solid black") %>
 
+<body>
 
 <h1 class="text-center"> On average, 90,000 people are missing in the USA at any given time! </h1>
 <h2 class="text-center"> 50,569 are adults</h2>
@@ -9,7 +10,7 @@
 
 
 <%= image_tag('teddybear.jpg', alt: 'Kid', width: '500', height: '400', :style => "border: 10px solid black" ) %>
-
+<%= image_tag('voices.jpg', alt: 'Kid', width: '500', height: '400', :style => "border: 10px solid black" ) %>
 
 <h2 class="text-center"> Every 40 seconds, a child goes missing in the U.S.</h2>
 
@@ -25,8 +26,6 @@
 <h4 class="text-center"> This map shows all the missing people and their last known location.</h4>
 <h4 class="text-center"> Help bring someone's loved ones home. </h4>
 <h5 class="text-center"> Sign up today to see details on missing people in your area. Help bring back HOPE!</h5>
-
-
 
 
 <div style='width: 800px;'>
@@ -62,7 +61,16 @@ handler.buildMap({ provider: {}, internal: {id: 'basic_map'}}, function(){
 </script>
 
 
+<h2 class="text-center"> With your help these people were brought back home</h2>
 
+<%= image_tag('kid1.jpg', alt: 'Kid1', width: '150', height: '200', :style => "border: 10px solid black" ) %>
+<%= image_tag('kid2.jpg', alt: 'Kid2', width: '180', height: '200', :style => "border: 10px solid black" ) %>
+<%= image_tag('kid4.jpg', alt: 'Kid4', width: '200', height: '200', :style => "border: 10px solid black" ) %>
+<%= image_tag('adult1.jpg', alt: 'adult1', width: '150', height: '200', :style => "border: 10px solid black" ) %>
+<%= image_tag('adult2.jpg', alt: 'adult2', width: '150', height: '200', :style => "border: 10px solid black" ) %>
+<%= image_tag('kid5.jpg', alt: 'kid5', width: '150', height: '200', :style => "border: 10px solid black" ) %>
+<%= image_tag('adult3.jpg', alt: 'adult3', width: '150', height: '200', :style => "border: 10px solid black" ) %>
 
+ </body>
 
 <p>© <%= Date.today.year %> My App.</p>
