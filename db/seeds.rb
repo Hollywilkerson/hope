@@ -10,7 +10,7 @@ Person.create!(fname:   "John",
                lname:    "Doe",
                email:   "john.doe@gmail.com",
                phone:   "555-555-5555",
-               addr:    "123 Main St",
+               address:    "123 Main St",
                city:    "denver",
                zip:      "55555")
 
@@ -19,7 +19,15 @@ Person.create!(fname:   "John",
    lname = Faker::Name.last_name
    email = Faker::Internet.safe_email
    phone = Faker::PhoneNumber.phone_number
-   addr = Faker::Address.street_address
+   address = Faker::Address.street_address
    city = Faker::Address.city
    zip= Faker::Address.zip
+
+  Person.create!(fname: fname,
+                  lname: lname,
+                  email:   email,
+                  phone:   phone,
+                  address: address,
+                  city:    city,
+                  zip:     zip)
 end
