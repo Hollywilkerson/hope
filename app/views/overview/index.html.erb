@@ -12,21 +12,20 @@
 <%= image_tag('dog.jpg', alt: 'Dog', width: '400', height: '300', :style => "border: 10px solid black" ) %>
 <div style='width: 800px;'>
 
-  
-  <div id="overview_map" style='width: 800px; height: 400px;'></div>
-</div>
 
+  <div style='width: 800px;'>
+    <div id="overview_map" style='width: 800px; height: 400px;'></div>
+  </div>
 
-<script>
-$(document).ready(function(){
-  handler = Gmaps.build('Google');
-handler.buildMap({ provider: {}, internal: {id: 'overview_map'}}, function(){
-  markers = handler.addMarkers(<%= raw @missing_people.to_json %>);
+  <script>
+    $(document).ready(function(){
+      handler = Gmaps.build('Google');
+      handler.buildMap({ provider: {}, internal: {id: 'overview_map'}}, function(){
+        markers = handler.addMarkers(<%= raw @missing_people.to_json %>);
 
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
-});
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });
 
-});
-</script>
-
+    });
+  </script>
