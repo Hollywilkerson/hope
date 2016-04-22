@@ -26,8 +26,8 @@ Person.create!(fname:   "John",
    zip= Faker::Address.zip
 
 
-   lat= rand + 39
-   long= rand -105
+   lat= rand() + 39
+   long= rand() -104
 
   Person.create!(fname: fname,
                   lname: lname,
