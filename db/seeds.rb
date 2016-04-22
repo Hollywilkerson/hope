@@ -12,7 +12,9 @@ Person.create!(fname:   "John",
                phone:   "555-555-5555",
                address:    "123 Main St",
                city:    "denver",
-               zip:      "55555")
+               zip:      "55555",
+               lat:     39.99,
+               long:    104.99)
 
 300.times do |person|
    fname = Faker::Name.first_name
@@ -23,11 +25,17 @@ Person.create!(fname:   "John",
    city = Faker::Address.city
    zip= Faker::Address.zip
 
+
+   lat= rand + 39
+   long= rand -105
+
   Person.create!(fname: fname,
                   lname: lname,
                   email:   email,
                   phone:   phone,
                   address: address,
                   city:    city,
-                  zip:     zip)
+                  zip:     zip,
+                  lat:     lat,
+                  long:    long)
 end
