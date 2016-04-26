@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   root to: 'home#index'
-  get 'missing_people' => 'overview#index', as: :overview
+  get 'missing_person' => 'overview#index', as: :overview
   get 'about' => 'about#index'
+  get '/missing_person/:id' => 'overview#show'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

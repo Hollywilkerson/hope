@@ -1,6 +1,5 @@
 <%= image_tag('treehope.jpg',alt: 'logo', width: '200', height: '120', :style => "border: 5px solid black") %>
 
-<body>
 
 <h1 class="text-center"> On average, 90,000 people are missing in the USA at any given time! </h1>
 <h2 class="text-center"> 50,569 are adults</h2>
@@ -27,38 +26,25 @@
 <h4 class="text-center"> Help bring someone's loved ones home. </h4>
 <h5 class="text-center"> Sign up today to see details on missing people in your area. Help bring back HOPE!</h5>
 
-
 <div style='width: 800px;'>
-  <div id="basic_map" style='width: 800px; height: 400px;'></div>
-</div>
 
 
+  <div style='width: 800px;'>
+    <div id="overview_map" style='width: 800px; height: 400px;'></div>
+  </div>
 
+  <script>
+    $(document).ready(function(){
+      handler = Gmaps.build('Google');
+      handler.buildMap({ provider: {}, internal: {id: 'overview_map'}}, function(){
+        markers = handler.addMarkers(<%=raw @hash.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });
 
-<script>
-$(document).ready(function(){
+    });
+  </script>
 
-
-handler = Gmaps.build('Google');
-handler.buildMap({ provider: {}, internal: {id: 'basic_map'}}, function(){
-  markers = handler.addMarkers([
-    {
-      "lat": 40,
-          "lng": -104,
-          "picture": {
-            "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
-          "width":  32,
-          "height": 32
-          },
-          "infowindow": "hello!"
-    }
-    ]);
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
-});
-
-});
-</script>
 
 
 <h2 class="text-center"> With your help these people were brought back home</h2>
@@ -71,6 +57,6 @@ handler.buildMap({ provider: {}, internal: {id: 'basic_map'}}, function(){
 <%= image_tag('kid5.jpg', alt: 'kid5', width: '150', height: '200', :style => "border: 10px solid black" ) %>
 <%= image_tag('adult3.jpg', alt: 'adult3', width: '150', height: '200', :style => "border: 10px solid black" ) %>
 
- </body>
+
 
 <p>© <%= Date.today.year %> My App.</p>

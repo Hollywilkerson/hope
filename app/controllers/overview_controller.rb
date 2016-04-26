@@ -2,13 +2,20 @@ class OverviewController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @missing_people = Person.all.take(5)
-    @hash = Gmaps4rails.build_markers(@missing_people) do |person, marker|
+
+    @missing_person = Person.all.take(5)
+    @hash = Gmaps4rails.build_markers(@missing_person) do |person, marker|
+
+
       marker.lat person.lat
       marker.lng person.long
-      marker.infowindow person.fname + " " + person.lname + " " + "Age:" + " " + person.age + " " + "Last Seen:" + " " + person.last_seen
+      marker.infowindow render_to_string(partial: '/overview/missing_person', locals: {my_person: person})
+
     end
+
+    #http://stackoverflow.com/questions/10418435/place-a-link-within-a-infowindow-using-gmaps4rails
+      def show
+        @missing_person = Person.find(params[:id])
+      end
   end
 end
-
-
