@@ -6,7 +6,7 @@ class OverviewController < ApplicationController
     @hash = Gmaps4rails.build_markers(@missing_people) do |person, marker|
       marker.lat person.lat
       marker.lng person.long
-      marker.infowindow person.fname + " " + person.lname
+      marker.infowindow person.fname + " " + person.lname + " " + "Age:" + " " + person.age + " " + "Last Seen:" + " " + person.last_seen
     end
   end
 end
