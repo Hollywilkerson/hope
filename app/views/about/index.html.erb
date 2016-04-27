@@ -3,41 +3,43 @@
 
 <h1 class="text-center" > About Me</h1>
 
-<bogus>
-  
-  <%= image_tag('holly.jpg', alt: 'Holly!', width: '400', height: '400',:style => "border: 10px solid black"  ) %>
-
-</bogus>
-
-</body>
+<p>
 
 
-
-
-<a  target="Holly's LinkedIn" href="https://goo.gl/Ln1jvg">Holly's LinkedIn Profile</a>
+<p align="center">
+  <%= image_tag('holly.jpg', :align=> 'middle' , width: '400', height: '400',:style =>
+    "border: 10px solid black" ) %>
 </p>
 
+
+
+<br>
+<a  target="Holly's LinkedIn" href="https://goo.gl/Ln1jvg">Holly's LinkedIn Profile</a>
+<br>
 <a target="Holly's Github" href="https://github.com/Hollywilkerson">Holly's GitHub</a>
-</div>
 
 
 
 <h4 class="text-center"> My name is Holly Wilkerson. I have a passion for helping others and would
   love to bring awareness to how many people go missing every year. The statistics are crazy.
   I created this project with the hopes of helping others bring their loved
-  ones home. Helping make the difference in even one families life would mean the world to me.'</h4>
+  ones home. Helping make the difference in even one families life, would mean the world to me.</h4>
 
-<%= image_tag('passionate.jpg', alt: 'Passion!', width: '400', height: '400',:style => "border: 10px solid black"  ) %>
-
-
+</h4>
 
 
-  <blah>
+<%= image_tag('passionate.jpg', :align=> "left", width: '400', height: '400',:style => "border: 10px solid black"  ) %>
 
-    <%= image_tag('neverlose.png', alt: 'missing', width: '500', height: '300', :style => "border: 10px solid black") %>
 
-  </blah>
 
-<p>© <%= Date.today.year %> My App.</p>
 
+<%= image_tag('neverlose.png', width: '500', height: '300', :style => "border: 10px solid black") %>
+</p>
+
+
+
+<br>
+<br>
 <body>
+<br>
+<p>© <%= Date.today.year %> My App.</p>

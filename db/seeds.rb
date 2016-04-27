@@ -10,9 +10,19 @@
  def self.random_weight_for_height(height)
   bmi = (19..40).to_a.sample
   sprintf("%.2f", ((height * height) * bmi)/703)
-end
+ end
 
-  ages = (5..25).to_a
+ top_left = 48.294752, -121.906738
+ bottom_right = 32.041434, -81.235352
+
+ minLat = 32.041434
+ maxLat = 48.294752
+ minLng =  -121.906738
+ maxLng = -81.235352
+
+
+
+ ages = (5..25).to_a
   heights = {
     5 => (40..46).to_a,
     6 => (42..49).to_a,
@@ -41,9 +51,9 @@ end
 
 
 
-  Person.create!(fname: "John",
-    lname: "Doe",
-    email: "john.doe@gmail.com",
+  Person.create!(fname: "Holly",
+    lname: "Wilkerson",
+    email: "Hollyfaces1@gmail.com",
     phone: "555-555-5555",
     address: "123 Main St",
     city: "denver",
@@ -52,7 +62,7 @@ end
     long: 104.99,
     hair_color: "blonde",
     eye_color: "brown",
-    age: 16,
+    age: 20,
     weight: 115,
     height: 62,
     dob: "05/10/1985",
@@ -68,7 +78,7 @@ some food court to get some lunch. "
 
 
 
-  500.times do |person|
+  200.times do |person|
 
     fname = Faker::Name.first_name
     lname = Faker::Name.last_name
@@ -77,8 +87,8 @@ some food court to get some lunch. "
     address = Faker::Address.street_address
     city = Faker::Address.city
     zip= Faker::Address.zip
-    lat = rand() + 39
-    long = rand() -104
+    #lat = rand() + 39
+    #long = rand() -104
     hair_color = ['red', 'brown', 'black', 'blonde'].sample
     eye_color = ['blue', 'green', 'brown', 'hazel'].sample
     age = ages.sample
@@ -90,6 +100,10 @@ some food court to get some lunch. "
     last_seen_wearing_pant_type = ['blue jeans', 'black jeans', 'slacks'].sample
     image = Faker::Avatar.image
     paragraph = Faker::Lorem.paragraph(2, true, 4)
+
+    lat = minLat + rand(maxLat - minLat)
+    long = minLng + rand(maxLng - minLng)
+
 
 
 
@@ -119,8 +133,6 @@ some food court to get some lunch. "
 
 
     )
-
-
 
 
 
