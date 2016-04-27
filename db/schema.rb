@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426151236) do
+ActiveRecord::Schema.define(version: 20160426222705) do
 
   create_table "people", force: :cascade do |t|
     t.string   "fname"
@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20160426151236) do
     t.string   "address"
     t.string   "city"
     t.string   "zip"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.float    "lat"
     t.float    "long"
     t.string   "hair_color"
@@ -32,6 +32,10 @@ ActiveRecord::Schema.define(version: 20160426151236) do
     t.string   "height"
     t.string   "dob"
     t.string   "last_seen"
+    t.string   "last_seen_wearing_shirt_color"
+    t.string   "last_seen_wearing_pant_type"
+    t.string   "image"
+    t.string   "paragraph"
   end
 
   create_table "users", force: :cascade do |t|

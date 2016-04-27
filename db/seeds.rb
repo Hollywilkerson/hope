@@ -56,7 +56,14 @@ end
     weight: 115,
     height: 62,
     dob: "05/10/1985",
-    last_seen: "01/15/2011"
+    last_seen: "01/15/2011",
+    last_seen_wearing_shirt_color: "green",
+    last_seen_wearing_pant_type:  "jeans",
+    image:   "holly.jpg",
+    paragraph: "I was last seen at the mall of america shopping with my sister. I had went to the \
+some food court to get some lunch. "
+
+
   )
 
 
@@ -79,6 +86,14 @@ end
     weight = random_weight_for_height(height)
     dob = (age).years.ago + rand(11).months + rand(30).days
     last_seen = Faker::Date.between(8.years.ago, Date.today)
+    last_seen_wearing_shirt_color = ['blue', 'red', 'black', 'green', 'purple', 'pink', 'orange'].sample
+    last_seen_wearing_pant_type = ['blue jeans', 'black jeans', 'slacks'].sample
+    image = Faker::Avatar.image
+    paragraph = Faker::Lorem.paragraph(2, true, 4)
+
+
+
+
 
     height = heights[age].sample
     Person.create!(fname: fname,
@@ -96,7 +111,13 @@ end
       weight: weight,
       height: height,
       dob: dob,
-      last_seen: last_seen
+      last_seen: last_seen,
+      last_seen_wearing_shirt_color: last_seen_wearing_shirt_color,
+      last_seen_wearing_pant_type: last_seen_wearing_pant_type,
+      image: image,
+      paragraph: paragraph
+
+
     )
 
 
